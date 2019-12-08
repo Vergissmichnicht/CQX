@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+
+int main(int argc, char *argv[]) {
+	int i,ca,cb=0,n,s,c;
+	
+	scanf("%d",&n);
+	getchar();
+	for(i=0;i<n;i++)
+	{
+		cb=0;
+		char a[101],b[100];
+		gets(a);
+		for(ca=0;ca<=strlen(a);ca++)
+		{
+			if(islower(a[ca]))
+				b[cb++]=a[ca];
+		}
+		cb=cb-1;
+		
+		while(cb>=0)
+		{
+			printf("%c",b[cb]);
+			cb--;
+		}
+		printf("\n");
+		
+	}
+
+	return 0;
+}
